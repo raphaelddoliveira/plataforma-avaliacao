@@ -46,3 +46,4 @@ app.*.map.json
 
 # Windows problematic files
 nul
+flutter_windows.zip
