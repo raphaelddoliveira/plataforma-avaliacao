@@ -1,0 +1,7 @@
+{
+  "name": "plataforma-avaliacao",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "flutter build web --release"
+  }
+}
