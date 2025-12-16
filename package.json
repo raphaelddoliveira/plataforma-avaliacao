@@ -2,6 +2,6 @@
   "name": "plataforma-avaliacao",
   "version": "1.0.0",
   "scripts": {
-    "build": "flutter build web --release"
+    "build": "echo 'Using pre-built files from build/web'"
   }
 }
