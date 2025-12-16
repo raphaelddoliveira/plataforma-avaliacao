@@ -1,4 +1,13 @@
 {
   "buildCommand": "echo 'Using pre-built files'",
-  "outputDirectory": "build/web"
+  "outputDirectory": "build/web",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
