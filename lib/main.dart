@@ -7,7 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
   // Remove o # da URL para web
-  setPathUrlStrategy();
+  // setPathUrlStrategy(); // Comentado para manter compatibilidade com Vercel
   
   // Inicializar Supabase
   await Supabase.initialize(
@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       onGenerateRoute: (settings) {
-        // Extrair id_avaliacao da URL
+        // Extrair id da URL (aceita tanto 'id' quanto 'id_avaliacao')
         final uri = Uri.parse(settings.name ?? '/');
-        final idAvaliacao = uri.queryParameters['id_avaliacao'];
+        final idAvaliacao = uri.queryParameters['id'] ?? uri.queryParameters['id_avaliacao'];
 
         if (idAvaliacao != null && idAvaliacao.isNotEmpty) {
           return MaterialPageRoute(
