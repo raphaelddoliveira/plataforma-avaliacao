@@ -1,13 +1,10 @@
 {
   "buildCommand": "echo 'Using pre-built files'",
   "outputDirectory": "build/web",
-  "routes": [
+  "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
